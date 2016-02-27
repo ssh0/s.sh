@@ -1,0 +1,154 @@
+#=#=#=
+# FORMAT:
+#
+# ```
+#  +--- Line that matches with '^# \"' is used for printing providers lists.
+#  |   +--- After ': ' parts is also used for printing providers lists.
+#  |   |                      +--- After the second ': ' is real comment.
+#  |   |                      |
+# # "A": Some description here: This field is ignored by completion.
+# A,url,{true|false}
+# |  |    |
+# |  |    +--- Open in GUI browser or not.
+# |  +--- Set the search providers url. Search query is placed in "%s".
+# +--- Alias for the provider.
+# ```
+#
+# * Commeting line is used by zsh completion function [_s](./_s)
+#
+# EXAMPLE:
+#
+# ```
+# # "m": Google Map: Search with Google Map and open page in GUI browser.
+# m,https://www.google.com/maps/place/%s,true
+# ```
+#=#=
+
+# "l": Google - I'm feeling lucky!
+l,https://www.google.co.jp/search?q=%s&btnI=I,false
+
+# "w": Wikipedia
+w,https://ja.wikipedia.org/wiki/%s,false
+
+# "p": Google image
+p,http://www.google.com/search?site=imghp&tbm=isch&q=%s,true
+
+# "m": Google Map
+m,https://www.google.com/maps/place/%s,true
+
+# "mfh": Google Map Navigation "from Home to xxx"
+# if you set the searching language 'English',
+# then replace '自宅' to 'Home'
+mfh,https://www.google.com/maps/dir/自宅/%s,true
+
+# "mfw": Google Map Navigation "from Work to xxx"
+# if you set the searching language 'English',
+# then replace '職場' to 'Work'
+mfw,https://www.google.com/maps/dir/職場/%s,true
+
+# "mfh": Google Map Navigation "from xxx to Home"
+# if you set the searching language 'English',
+# then replace '自宅' to 'Home'
+mth,https://www.google.com/maps/dir/%s/自宅,true
+
+# "mfw": Google Map Navigation "from xxx to Work"
+# if you set the searching language 'English',
+# then replace '職場' to 'Work'
+mtw,https://www.google.com/maps/dir/%s/職場,true
+
+# "n": niconico
+n,http://www.nicovideo.jp/search/%s,true
+
+# "nd": niconico dictionary
+nd,http://dic.nicovideo.jp/s/al/a/%s,false
+
+# 'f': flickr
+f,https://www.flickr.com/search/?text=%s&safe_search=3,true
+
+# "y": Youtube
+y,http://www.youtube.com/results?search_query=%s&sm=3,true
+
+# "rt": Yahoo real time search
+rt,http://realtime.search.yahoo.co.jp/search?p=%s&ei=UTF-8,true
+
+# "ip": IP address
+ip,http://www.ip-adress.com/whois/%s,true
+
+# "tw": twitter
+tw,https://mobile.twitter.com/search?src=typd&q=%s,false
+
+# "sc": Google Scholar
+sc,http://scholar.google.co.jp/scholar?as_vis=1&q=%s&hl=ja&as_sdt=1,5,false
+
+# "q": Qiita
+q,http://qiita.com/search?q=%s,false
+
+# "g": Github - repo
+g,https://github.com/search?q=%s,false
+
+# "gu": Github - user
+gu,https://github.com/search?q=%s&type=Users,false
+
+# "gc": Github - code
+gc,https://github.com/search?q=%s&type=Code,false
+
+# "gs": Gist
+gs,https://gist.github.com/search?utf8=✓&q=%s,false
+
+# "t": translate ja <-> en
+t,http://ejje.weblio.jp/content/%s,false
+
+# "wd": wordnik
+wd,https://www.wordnik.com/words/%s,false
+
+# "mpl": matplotlib documentation
+mpl,http://matplotlib.org/search.html?q=%s,true
+
+# "py2": Python 2.7 documentation
+py2,https://docs.python.org/2.7/search.html?q=%s,true
+
+# "py3": Python 3.4 documentation
+py3,https://docs.python.org/3.4/search.html?q=%s,true
+
+# "8tr": 8tracks
+8tr,https://8tracks.com/explore/%s",true
+
+# "arx": arxiv
+arx,http://arxiv.org/find/all/1/all:+%s/0/1/0/all/0/1,true
+
+# "dig": Digg
+dig,https://digg.com/search?q=%s,true
+
+# "dg": duckduckgo
+dg,https://duckduckgo.com/?q=%s,true
+
+# "gm": Gmail
+gm,https://mail.google.com/mail/u/0/#search/%s,true
+
+# "g+": Google Plus
+g+,https://plus.google.com/s/%s/top,true
+
+# "hn": Hacker News
+hn,https://hn.algolia.com/?q=%s,false
+
+# "pin": Pinterest
+pin,https://www.pinterest.com/search/pins/?q=%s,true
+
+# "red": Reddit
+red,https://www.reddit.com/search?q=%s,true
+
+# "sdc": SoundCloud
+sdc,https://soundcloud.com/search?q=%s,true
+
+# "so": Stackoverflow
+so,https://stackoverflow.com/search?q=%s,true
+
+# "tor": Torentz
+tor,https://www.torrentz.eu/search?q=%s,true
+
+# "an": Anitube.se
+an,http://www.anitube.se/search/?search_id=%s,true
+
+# "fb": Facebook
+fb,https://www.facebook.com/search/top/?q=%s,true
+
