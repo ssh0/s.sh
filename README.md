@@ -3,6 +3,41 @@ s
 
 s - Search from terminal
 
+Installation
+------------
+
+### Install manually
+
+* Clone this repository
+
+```
+git clone https://github.com/ssh0/s.sh.git ~/.zsh/plugins/s.sh
+```
+
+* Add the path of directory you clone the repository to `$PATH` and `$fpath` in your `~/.zshrc`
+
+```zsh
+PATH=$HOME/.zsh/plugins/s.sh:$PATH
+fpath=($HOME/.zsh/plugins/s.sh $fpath)
+```
+
+### Using zsh plugin manager
+
+* zplug
+
+```
+zplug "ssh0/s.sh"
+```
+
+* zgen
+
+```
+zgen load ssh0/s.sh
+```
+
+Usage
+-----
+
 ```
 
 NAME
@@ -69,7 +104,6 @@ Providers
 
 How to add providers
 --------------------
-
 
 FORMAT:
 
